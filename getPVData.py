@@ -29,9 +29,9 @@ def convertTimestamp(timestamp):
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser(prog='getPVData', description='takes in a list of PVs and a start and end time, then returns the data for those PVs over that time period')
 	parser.add_argument("url", help="This is the URL to the appliance cluster. For example, http://arch-app.slac.stanford.edu")
-	parser.add_argument("file", help="A CSV file with a list of PVs")
-	parser.add_argument("--start", help="Start time to get data for PVs")
-	parser.add_argument("--end", help="End time to get data for PVs")
+	parser.add_argument("file", help="A CSV file with a list of PVs, one per line")
+	parser.add_argument("--start", help="Start time to get data for PVs (Posix timestamp format)")
+	parser.add_argument("--end", help="End time to get data for PVs (Posix timestamp format)")
 	args = parser.parse_args()
 	lines = []
 	with open(args.file, 'r') as f:
