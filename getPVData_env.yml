@@ -28,5 +28,3 @@ dependencies:
   - six==1.11.0
   - urllib3==1.22
   - zope.interface==4.4.3
-prefix: /afs/slac/g/lcls/package/anaconda/miniconda3/envs/getPVData_env
-
